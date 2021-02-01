@@ -1,0 +1,30 @@
+{
+  "name": "micro-airtable-api",
+  "version": "1.1.0",
+  "main": "index.js",
+  "bin": "./bin/index.js",
+  "scripts": {
+    "start": "node bin/index.js",
+    "dev": "nodemon -r dotenv/config --ignore '*.test.js' bin/index.js",
+    "prettier": "prettier --write 'index.js' 'index.test.js' 'src/*.js'",
+    "lint": "prettier --list-different 'index.js' 'src/*.js'",
+    "test": "npm run lint --silent && jest"
+  },
+  "dependencies": {
+    "http-proxy": "^1.16.2",
+    "path-match": "^1.2.4"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0",
+    "got": "^9.2.2",
+    "jest": "^23.5.0",
+    "nodemon": "^1.18.3",
+    "prettier": "1.14.2",
+    "test-listen": "^1.1.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "license": "MIT"
+}
